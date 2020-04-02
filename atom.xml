@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xuqm.github.io/"/>
-  <updated>2020-04-02T09:29:09.887Z</updated>
+  <updated>2020-04-02T09:57:40.795Z</updated>
   <id>https://xuqm.github.io/</id>
   
   <author>
@@ -17,25 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>这是dier个post的测试页面</title>
-    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
-    <published>2020-04-02T09:28:12.000Z</published>
-    <updated>2020-04-02T09:29:09.887Z</updated>
+    <title>这是一个draft的测试页面</title>
+    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AAdraft%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AAdraft%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
+    <published>2020-04-02T09:57:40.000Z</published>
+    <updated>2020-04-02T09:57:40.795Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:29:18 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:57:41 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Thu Apr 02 2020 17:29:18 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+        &lt;!-- build time:Thu Apr 02 2020 17:57:41 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
       
     
     </summary>
     
     
-      <category term="Kotlin" scheme="https://xuqm.github.io/categories/Kotlin/"/>
+      <category term="Android" scheme="https://xuqm.github.io/categories/Android/"/>
+    
+    
+      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+    
+      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是dier个post的测试页面</title>
+    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
+    <published>2020-04-02T09:28:12.000Z</published>
+    <updated>2020-04-02T09:34:10.554Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:42:09 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Thu Apr 02 2020 17:42:09 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="云服务器" scheme="https://xuqm.github.io/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
       <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
