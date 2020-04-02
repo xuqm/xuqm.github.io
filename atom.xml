@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xuqm.github.io/"/>
-  <updated>2020-04-02T06:29:00.394Z</updated>
+  <updated>2020-04-02T09:29:09.887Z</updated>
   <id>https://xuqm.github.io/</id>
   
   <author>
@@ -17,24 +17,82 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://xuqm.github.io/2020/04/02/hello-world/"/>
-    <id>https://xuqm.github.io/2020/04/02/hello-world/</id>
-    <published>2020-04-02T06:29:00.394Z</published>
-    <updated>2020-04-02T06:29:00.394Z</updated>
+    <title>这是dier个post的测试页面</title>
+    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
+    <published>2020-04-02T09:28:12.000Z</published>
+    <updated>2020-04-02T09:29:09.887Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 16:49:49 GMT+0800 (GMT+08:00) --><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:29:18 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Thu Apr 02 2020 16:49:49 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hex
+        &lt;!-- build time:Thu Apr 02 2020 17:29:18 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
       
     
     </summary>
     
     
+      <category term="Kotlin" scheme="https://xuqm.github.io/categories/Kotlin/"/>
+    
+    
+      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+    
+      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是一个post的测试页面</title>
+    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
+    <published>2020-04-02T09:19:06.000Z</published>
+    <updated>2020-04-02T09:19:06.134Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://xuqm.github.io/categories/Android/"/>
+    
+    
+      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+    
+      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://xuqm.github.io/2020/04/02/hello-world/"/>
+    <id>https://xuqm.github.io/2020/04/02/hello-world/</id>
+    <published>2020-04-02T06:29:00.394Z</published>
+    <updated>2020-04-02T09:20:31.835Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hex
+      
+    
+    </summary>
+    
+    
+    
+      <category term="-hello" scheme="https://xuqm.github.io/tags/hello/"/>
     
   </entry>
   
