@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xuqm.github.io/"/>
-  <updated>2020-04-02T09:57:40.795Z</updated>
+  <updated>2020-04-03T03:25:35.929Z</updated>
   <id>https://xuqm.github.io/</id>
   
   <author>
@@ -17,110 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>这是一个draft的测试页面</title>
-    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AAdraft%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AAdraft%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
-    <published>2020-04-02T09:57:40.000Z</published>
-    <updated>2020-04-02T09:57:40.795Z</updated>
+    <title>设计模式-单例模式</title>
+    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-04-03T02:12:48.000Z</published>
+    <updated>2020-04-03T03:25:35.929Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:57:41 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Fri Apr 03 2020 11:26:14 GMT+0800 (GMT+08:00) --><blockquote><h5 id="最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"><a class="markdownIt-Anchor" href="#最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"></a> 最近在学习设计模式，之前断断续续的看过好多，自己也没有专门的练习和深入了解过，一直感觉对应设计模式相关的东西还是处于懵懂状态，这次下定决心好好的学习一下，所以做一个笔记用来督促自己。</h5></blockquote><h6 id="资料手机与一下网站如有冒犯烦请告知"><a class="markdownIt-Anchor" href="#资料手机与一下网站如有冒犯烦请告知"></a> 资料手机与一下网站，如有冒犯，烦请告知</h6><blockquote><p><a href="https://www.cnblogs.com/garryfu/p/7976546.html" target="_blank" rel="noopener">https://www.cnblogs.com/garryfu/p/7976546.html</a></p></blockquote><blockquote><p><a href="http://c.biancheng.net/design_pattern/" target="_blank" rel="noopener">http://c.biancheng.net/design_pattern/</a></p></blockquote><blockquote><p><a href="https://www.runoob.com/design-pattern/design-pattern-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/design-pattern/design-pattern-tutorial.html</a></p></blockquote><hr><h4 id="简单说明"><a class="markdownIt-Anchor" href="#简单说明"></a> 简单说明</h4><ol><li>单例模式可以维持系统内某个类只有一个实例。</li><li>在系统中，日志对象、对话框、打印机驱动等通常的会设计成单例模式。</li><li>单例模式主要用来保持状态的统一，避免不同请求同时调用时，会造成状态混乱的情况。</li><li>编不下去了！！！我承认我就是个菜狗</li></ol><h4 id="简单理解"><a class="markdownIt-Anchor" href="#简单理解"></a> 简单理解</h4><ol><li>类的构造器私有化</li><li>内部实例化</li><li>外部全局访问</li></ol><h4 id="静态常量实现-饿汉式"><a class="markdownIt-Anchor" href="#静态常量实现-饿汉式"></a> 静态常量实现 饿汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="comment">//私有化构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//静态常量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line"><span class="comment">//外部访问接口</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//提供一个外部访问方法，用来测试</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"创建成功"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">a</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Singleton.getInstance().print();<span class="comment">//测试</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="静态代码块实现-饿汉式"><a class="markdownIt-Anchor" href="#静态代码块实现-饿汉式"></a> 静态代码块实现 - 饿汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="comment">//私有化构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singletonton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//静态代码块实现</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//提供一个外部访问的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="模式特点"><a class="markdownIt-Anchor" href="#模式特点"></a> 模式特点</h4><ol><li>饿汉式单例，在类加载的时候就已经创建好了一个静态对象供系统使用，以后不再改变，所以是线程安全的，可以直接用于多线程</li></ol><h4 id="线程不安全的-懒汉式"><a class="markdownIt-Anchor" href="#线程不安全的-懒汉式"></a> 线程不安全的 - 懒汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == instance)</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="线程安全的-懒汉式"><a class="markdownIt-Anchor" href="#线程安全的-懒汉式"></a> 线程安全的 - 懒汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == instance)</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="模式特点-2"><a class="markdownIt-Anchor" href="#模式特点-2"></a> 模式特点</h4><ol><li>懒汉式单例模式，使用了延迟加载的方式，只有在调用<code>getInstance()</code>方法时才会进行实例化</li><li>第一种模式虽然可以做到延时加载，但是在多线程的使用场景中容易出现多实例的情况</li><li>第二种模式添加了<code>synchronized</code>同步锁，使得该方法变成了线程安全的方式，但是多数情况下是不需要同步的，所以该模式运行效率很低。</li></ol><h4 id="双重校验锁模式"><a class="markdownIt-Anchor" href="#双重校验锁模式"></a> 双重校验锁模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == instance)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton<span class="class">.<span class="keyword">class</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">null</span> == instance)&#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="模式特点-3"><a class="markdownIt-Anchor" href="#模式特点-3"></a> 模式特点</h4><ol><li>延迟加载</li><li>第一次判断<code>instance</code>为空的时候，会进入同步锁，进入同步锁的线程根据再次判断的情况，实例化<code>Singleton</code>,第二次访问的时候，<code>instance</code>不为空，则不进入同步锁，保证了执行效率。</li></ol><h4 id="静态内部类模式"><a class="markdownIt-Anchor" href="#静态内部类模式"></a> 静态内部类模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span></span>&#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SingletonHolder.instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="模式特点-4"><a class="markdownIt-Anchor" href="#模式特点-4"></a> 模式特点</h4><ol><li>多线程并发下，线程是安全的</li><li>但是遇到序列号对象时，默认的方式运行得到的结果就是多例的。</li></ol><h4 id="枚举模式"><a class="markdownIt-Anchor" href="#枚举模式"></a> 枚举模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton&#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    <span class="keyword">private</span> String test = <span class="string">"singleton"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//测试一下</span></span><br><span class="line"><span class="keyword">public</span> test&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Singleton.INSTANCE.print();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Thu Apr 02 2020 17:57:41 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+        &lt;!-- build time:Fri Apr 03 2020 11:26:14 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于
       
     
     </summary>
     
     
-      <category term="Android" scheme="https://xuqm.github.io/categories/Android/"/>
+      <category term="设计模式" scheme="https://xuqm.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
       <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
     
-      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是dier个post的测试页面</title>
-    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AFdier%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
-    <published>2020-04-02T09:28:12.000Z</published>
-    <updated>2020-04-02T09:34:10.554Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:42:09 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Thu Apr 02 2020 17:42:09 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="云服务器" scheme="https://xuqm.github.io/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
-    
-      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是一个post的测试页面</title>
-    <link href="https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    <id>https://xuqm.github.io/2020/04/02/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AApost%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</id>
-    <published>2020-04-02T09:19:06.000Z</published>
-    <updated>2020-04-02T09:19:06.134Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Thu Apr 02 2020 17:21:05 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://xuqm.github.io/categories/Android/"/>
-    
-    
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
-    
-      <category term="kotlin" scheme="https://xuqm.github.io/tags/kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://xuqm.github.io/2020/04/02/hello-world/"/>
-    <id>https://xuqm.github.io/2020/04/02/hello-world/</id>
-    <published>2020-04-02T06:29:00.000Z</published>
-    <updated>2020-04-02T10:07:49.827Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Thu Apr 02 2020 18:07:50 GMT+0800 (GMT+08:00) --><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Thu Apr 02 2020 18:07:50 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hex
-      
-    
-    </summary>
-    
-    
-    
-      <category term="hello" scheme="https://xuqm.github.io/tags/hello/"/>
+      <category term="java" scheme="https://xuqm.github.io/tags/java/"/>
     
   </entry>
   
