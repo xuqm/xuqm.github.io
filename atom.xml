@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xuqm.github.io/"/>
-  <updated>2020-04-17T10:02:16.886Z</updated>
+  <updated>2020-04-17T10:05:21.765Z</updated>
   <id>https://xuqm.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用Django 做服务端开发的一次尝试</title>
+    <title>使用Django 做服务端开发的一次尝试-1</title>
     <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/"/>
     <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/</id>
     <published>2020-04-17T06:38:24.000Z</published>
-    <updated>2020-04-17T10:02:16.886Z</updated>
+    <updated>2020-04-17T10:05:21.765Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Fri Apr 17 2020 18:04:29 GMT+0800 (GMT+08:00) --><blockquote><h5 id="最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"><a class="markdownIt-Anchor" href="#最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"></a> 最近在学习设计模式，之前断断续续的看过好多，自己也没有专门的练习和深入了解过，一直感觉对应设计模式相关的东西还是处于懵懂状态，这次下定决心好好的学习一下，所以做一个笔记用来督促自己。</h5></blockquote><blockquote><p>前段时间，想要整理一下现有的Android技术，写一个可以用的快速开发框架，然而，咸鱼依然还是咸鱼。</p><p>使用mvvm模式，写了一部分。不会放出来的，那么羞耻的东西。</p><p>重点是，想要调用接口做测试的时候，突然想起来当年玩过几天Django，接着就想，是不是可以用django写一个测试用的服务呢？</p><p>写一个试试吧。</p></blockquote><h4 id="走一步看一步吧走到哪是哪才是咸鱼的本命"><a class="markdownIt-Anchor" href="#走一步看一步吧走到哪是哪才是咸鱼的本命"></a> 走一步看一步吧，走到哪是哪才是咸鱼的本命</h4><h5 id="1新建一个项目这里我用的是-pycharm做的开发"><a class="markdownIt-Anchor" href="#1新建一个项目这里我用的是-pycharm做的开发"></a> 1.新建一个项目，这里我用的是<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener"> <em>PyCharm</em></a>做的开发。</h5><blockquote><p>写到这里，突然想起来需要截图，然后想了下图片需要上传到服务器，然后想要了解下有哪些可以用的服务器，等我回来。</p></blockquote><blockquote><p>想了想，自己有个闲置的阿里云服务器，就用它吧</p><p>写了个脚本，使用 <code>python -m SimpleHTTPServer</code> 启动一个文件服务</p></blockquote><img src="http://39.105.161.109/images/django-creat.jpg" style="zoom:50%"><blockquote><p>我的项目都是这么创建的，感觉比较方便</p><p>环境用的是anaconda 的python3.7，我本地的是3.8版本，直接使用的时候，配置postgresql的时候会出问题，没找到为啥，换了一个就好了</p></blockquote><blockquote><p>等了一会，该转的圈转完了，新建项目的工作完成了。目录结构</p></blockquote><img src="http://39.105.161.109/images/django-creat-success.jpg" style="zoom:50%"><blockquote><p>启动一下看看效果,看看开心的小火箭</p></blockquote><p><img src="http://39.105.161.109/images/django-creat_web.jpg" alt=""></p><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Fri Apr 17 2020 18:05:31 GMT+0800 (GMT+08:00) --><blockquote><h5 id="最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"><a class="markdownIt-Anchor" href="#最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"></a> 最近在学习设计模式，之前断断续续的看过好多，自己也没有专门的练习和深入了解过，一直感觉对应设计模式相关的东西还是处于懵懂状态，这次下定决心好好的学习一下，所以做一个笔记用来督促自己。</h5></blockquote><blockquote><p>前段时间，想要整理一下现有的Android技术，写一个可以用的快速开发框架，然而，咸鱼依然还是咸鱼。</p><p>使用mvvm模式，写了一部分。不会放出来的，那么羞耻的东西。</p><p>重点是，想要调用接口做测试的时候，突然想起来当年玩过几天Django，接着就想，是不是可以用django写一个测试用的服务呢？</p><p>写一个试试吧。</p></blockquote><h4 id="走一步看一步吧走到哪是哪才是咸鱼的本命"><a class="markdownIt-Anchor" href="#走一步看一步吧走到哪是哪才是咸鱼的本命"></a> 走一步看一步吧，走到哪是哪才是咸鱼的本命</h4><h5 id="1新建一个项目这里我用的是-pycharm做的开发"><a class="markdownIt-Anchor" href="#1新建一个项目这里我用的是-pycharm做的开发"></a> 1.新建一个项目，这里我用的是<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener"> <em>PyCharm</em></a>做的开发。</h5><blockquote><p>写到这里，突然想起来需要截图，然后想了下图片需要上传到服务器，然后想要了解下有哪些可以用的服务器，等我回来。</p></blockquote><blockquote><p>想了想，自己有个闲置的阿里云服务器，就用它吧</p><p>写了个脚本，使用 <code>python -m SimpleHTTPServer</code> 启动一个文件服务</p></blockquote><img src="http://39.105.161.109/images/django-creat.jpg" style="zoom:50%"><blockquote><p>我的项目都是这么创建的，感觉比较方便</p><p>环境用的是anaconda 的python3.7，我本地的是3.8版本，直接使用的时候，配置postgresql的时候会出问题，没找到为啥，换了一个就好了</p></blockquote><blockquote><p>等了一会，该转的圈转完了，新建项目的工作完成了。目录结构</p></blockquote><img src="http://39.105.161.109/images/django-creat-success.jpg" style="zoom:50%"><blockquote><p>启动一下看看效果,看看开心的小火箭。</p></blockquote><img src="http://39.105.161.109/images/django-creat_web.jpg" alt="asdd" style="zoom:80%"><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Fri Apr 17 2020 18:04:29 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于
+        &lt;!-- build time:Fri Apr 17 2020 18:05:31 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于
       
     
     </summary>
