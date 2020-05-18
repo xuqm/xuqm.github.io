@@ -5,9 +5,9 @@
   <subtitle>性感Android开发，在线挨打</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://xuqm.github.io/"/>
+  <link href="https://blog.xuqinmin.com/"/>
   <updated>2020-04-20T03:30:46.483Z</updated>
-  <id>https://xuqm.github.io/</id>
+  <id>https://blog.xuqinmin.com/</id>
   
   <author>
     <name>Xuqm</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>使用Django 做服务端开发的一次尝试-3</title>
-    <link href="https://xuqm.github.io/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/"/>
-    <id>https://xuqm.github.io/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/"/>
+    <id>https://blog.xuqinmin.com/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/</id>
     <published>2020-04-20T03:30:01.000Z</published>
     <updated>2020-04-20T03:30:46.483Z</updated>
     
@@ -35,23 +35,23 @@
     </summary>
     
     
-      <category term="python" scheme="https://xuqm.github.io/categories/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/categories/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/categories/python/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/categories/python/django/"/>
     
     
-      <category term="python" scheme="https://xuqm.github.io/tags/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/tags/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/tags/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/tags/django/"/>
     
-      <category term="restframework" scheme="https://xuqm.github.io/tags/restframework/"/>
+      <category term="restframework" scheme="https://blog.xuqinmin.com/tags/restframework/"/>
     
   </entry>
   
   <entry>
     <title>使用Django 做服务端开发的一次尝试-2</title>
-    <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/"/>
-    <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/"/>
+    <id>https://blog.xuqinmin.com/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/</id>
     <published>2020-04-17T10:06:46.000Z</published>
     <updated>2020-05-18T06:18:05.705Z</updated>
     
@@ -67,23 +67,23 @@
     </summary>
     
     
-      <category term="python" scheme="https://xuqm.github.io/categories/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/categories/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/categories/python/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/categories/python/django/"/>
     
     
-      <category term="python" scheme="https://xuqm.github.io/tags/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/tags/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/tags/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/tags/django/"/>
     
-      <category term="restframework" scheme="https://xuqm.github.io/tags/restframework/"/>
+      <category term="restframework" scheme="https://blog.xuqinmin.com/tags/restframework/"/>
     
   </entry>
   
   <entry>
     <title>使用Django 做服务端开发的一次尝试-1</title>
-    <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/"/>
-    <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/"/>
+    <id>https://blog.xuqinmin.com/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/</id>
     <published>2020-04-17T06:38:24.000Z</published>
     <updated>2020-05-18T06:17:41.343Z</updated>
     
@@ -99,23 +99,23 @@
     </summary>
     
     
-      <category term="python" scheme="https://xuqm.github.io/categories/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/categories/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/categories/python/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/categories/python/django/"/>
     
     
-      <category term="python" scheme="https://xuqm.github.io/tags/python/"/>
+      <category term="python" scheme="https://blog.xuqinmin.com/tags/python/"/>
     
-      <category term="django" scheme="https://xuqm.github.io/tags/django/"/>
+      <category term="django" scheme="https://blog.xuqinmin.com/tags/django/"/>
     
-      <category term="restframework" scheme="https://xuqm.github.io/tags/restframework/"/>
+      <category term="restframework" scheme="https://blog.xuqinmin.com/tags/restframework/"/>
     
   </entry>
   
   <entry>
     <title>设计模式-建造者模式</title>
-    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-03T05:46:57.000Z</published>
     <updated>2020-04-03T05:47:33.592Z</updated>
     
@@ -131,19 +131,19 @@
     </summary>
     
     
-      <category term="设计模式" scheme="https://xuqm.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://blog.xuqinmin.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+      <category term="android" scheme="https://blog.xuqinmin.com/tags/android/"/>
     
-      <category term="java" scheme="https://xuqm.github.io/tags/java/"/>
+      <category term="java" scheme="https://blog.xuqinmin.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>设计模式-抽象工厂模式</title>
-    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-03T05:32:01.000Z</published>
     <updated>2020-04-03T06:43:10.158Z</updated>
     
@@ -159,19 +159,19 @@
     </summary>
     
     
-      <category term="设计模式" scheme="https://xuqm.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://blog.xuqinmin.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+      <category term="android" scheme="https://blog.xuqinmin.com/tags/android/"/>
     
-      <category term="java" scheme="https://xuqm.github.io/tags/java/"/>
+      <category term="java" scheme="https://blog.xuqinmin.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>设计模式-工厂模式</title>
-    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-03T03:38:24.000Z</published>
     <updated>2020-04-03T04:05:14.717Z</updated>
     
@@ -187,19 +187,19 @@
     </summary>
     
     
-      <category term="设计模式" scheme="https://xuqm.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://blog.xuqinmin.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+      <category term="android" scheme="https://blog.xuqinmin.com/tags/android/"/>
     
-      <category term="java" scheme="https://xuqm.github.io/tags/java/"/>
+      <category term="java" scheme="https://blog.xuqinmin.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>设计模式-单例模式</title>
-    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://blog.xuqinmin.com/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-03T02:12:48.000Z</published>
     <updated>2020-04-03T03:27:30.163Z</updated>
     
@@ -215,12 +215,12 @@
     </summary>
     
     
-      <category term="设计模式" scheme="https://xuqm.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://blog.xuqinmin.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="android" scheme="https://xuqm.github.io/tags/android/"/>
+      <category term="android" scheme="https://blog.xuqinmin.com/tags/android/"/>
     
-      <category term="java" scheme="https://xuqm.github.io/tags/java/"/>
+      <category term="java" scheme="https://blog.xuqinmin.com/tags/java/"/>
     
   </entry>
   
