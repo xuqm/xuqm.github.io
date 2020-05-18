@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xuqm.github.io/"/>
-  <updated>2020-04-17T10:26:21.484Z</updated>
+  <updated>2020-04-20T03:30:46.483Z</updated>
   <id>https://xuqm.github.io/</id>
   
   <author>
@@ -17,19 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用Django 做服务端开发的一次尝试-2</title>
-    <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/"/>
-    <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/</id>
-    <published>2020-04-17T10:06:46.000Z</published>
-    <updated>2020-04-17T10:26:21.484Z</updated>
+    <title>使用Django 做服务端开发的一次尝试-3</title>
+    <link href="https://xuqm.github.io/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/"/>
+    <id>https://xuqm.github.io/2020/04/20/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-003/</id>
+    <published>2020-04-20T03:30:01.000Z</published>
+    <updated>2020-04-20T03:30:46.483Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Fri Apr 17 2020 18:26:32 GMT+0800 (GMT+08:00) --><blockquote><p>之前完成了一个django项目的新建工作，这次就做一些初始化的东西吧</p></blockquote><h4 id="1使用postgresql数据库"><a class="markdownIt-Anchor" href="#1使用postgresql数据库"></a> 1.使用postgresql数据库</h4><blockquote><p>数据库用户、密码、库 这些东西，先准备好</p></blockquote><blockquote><p>使用 <code>pip install psycopg2</code> 命令安装 <code>psycopg2</code> 作为数据库驱动，可能会遇到问题，我是直接安装了个vs2019 解决的，粗暴而简单</p></blockquote><p>修改<code>settings.py</code>文件(自己本地玩的，用户名密码就不隐藏了)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="comment"># 'ENGINE': 'django.db.backends.sqlite3',</span></span><br><span class="line">        <span class="comment"># 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</span></span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.postgresql_psycopg2'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'django-rest'</span>,  <span class="comment"># 数据库名字</span></span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'django'</span>,  <span class="comment"># 用户名</span></span><br><span class="line">        <span class="string">"PASSWORD"</span>: <span class="string">'123456'</span>,  <span class="comment"># 自己的密码</span></span><br><span class="line">        <span class="string">"HOST"</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="number">5432</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>直接迁移数据库：<code>python manage.py migrate</code></p><p>数据库迁移完成，我习惯直接开启admin，<code>python manage.py createsuperuser</code></p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(venv) E:\PythonProjects\djanfo_rest&gt;python manage<span class="variable">.py</span> createsuperuser</span><br><span class="line">Username (leave blank to <span class="keyword">use</span> 'xuqin'): xuqm</span><br><span class="line">Error: That username is already taken.</span><br><span class="line">Username (leave blank to <span class="keyword">use</span> 'xuqin'): admin</span><br><span class="line">Email address: <span class="number">123456</span></span><br><span class="line">Error: Enter a valid email address.</span><br><span class="line">Email address: xuqinmin12@sina<span class="variable">.com</span></span><br><span class="line">Password:</span><br><span class="line">Password (again):</span><br><span class="line">This password is too short. It must contain at least <span class="number">8</span> characters.</span><br><span class="line">This password is too common.</span><br><span class="line">This password is entirely numeric.</span><br><span class="line">Bypass password validation <span class="keyword">and</span> create user anyway? [y/N]: y</span><br><span class="line">Superuser created successfully.</span><br></pre></td></tr></table></figure><p>使用的是一个旧的数据库，所以其实已经创建过超级用户了</p><p>理论上现在可以看到管理页面了，<code>http://127.0.0.1:8000/admin</code></p><p><img src="http://39.105.161.109/images/admin/admin_login.png" alt=""></p><p>输入刚才创建的超级用户的用户名密码，完成登录</p><p><img src="http://39.105.161.109/images/admin/admin_administration.png" alt=""></p><p>就是长的这样子。</p><blockquote><p>现有有个问题，我这个学渣，看不懂英文。</p><p>改！</p></blockquote><p>修改<code>settings.py</code>文件</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = <span class="string">'zh-Hans'</span></span><br><span class="line"></span><br><span class="line">TIME_ZONE = <span class="string">'Asia/Harbin'</span></span><br></pre></td></tr></table></figure><p>结果就好看多了么</p><p><img src="http://39.105.161.109/images/admin/admin_zh.png" alt=""></p><blockquote><p>下班了~</p></blockquote><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Fri Apr 17 2020 18:26:32 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;p&gt;之前完成了一个django项目的新建工作，这次就做一些初始化的东西吧&lt;/p&gt;&lt;/blockquote&gt;&lt;h4 id=&quot;1
+        &lt;!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://xuqm.github.io/categories/python/"/>
+    
+      <category term="django" scheme="https://xuqm.github.io/categories/python/django/"/>
+    
+    
+      <category term="python" scheme="https://xuqm.github.io/tags/python/"/>
+    
+      <category term="django" scheme="https://xuqm.github.io/tags/django/"/>
+    
+      <category term="restframework" scheme="https://xuqm.github.io/tags/restframework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Django 做服务端开发的一次尝试-2</title>
+    <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/"/>
+    <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0-002/</id>
+    <published>2020-04-17T10:06:46.000Z</published>
+    <updated>2020-05-18T06:18:05.705Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --><blockquote><p>之前完成了一个django项目的新建工作，这次就做一些初始化的东西吧</p></blockquote><h4 id="1使用postgresql数据库"><a class="markdownIt-Anchor" href="#1使用postgresql数据库"></a> 1.使用postgresql数据库</h4><blockquote><p>数据库用户、密码、库 这些东西，先准备好</p></blockquote><blockquote><p>使用 <code>pip install psycopg2</code> 命令安装 <code>psycopg2</code> 作为数据库驱动，可能会遇到问题，我是直接安装了个vs2019 解决的，粗暴而简单</p></blockquote><p>修改<code>settings.py</code>文件(自己本地玩的，用户名密码就不隐藏了)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="comment"># 'ENGINE': 'django.db.backends.sqlite3',</span></span><br><span class="line">        <span class="comment"># 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</span></span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.postgresql_psycopg2'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'django-rest'</span>,  <span class="comment"># 数据库名字</span></span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'django'</span>,  <span class="comment"># 用户名</span></span><br><span class="line">        <span class="string">"PASSWORD"</span>: <span class="string">'123456'</span>,  <span class="comment"># 自己的密码</span></span><br><span class="line">        <span class="string">"HOST"</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="number">5432</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>直接迁移数据库：<code>python manage.py migrate</code></p><p>数据库迁移完成，我习惯直接开启admin，<code>python manage.py createsuperuser</code></p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(venv) E:\PythonProjects\djanfo_rest&gt;python manage<span class="variable">.py</span> createsuperuser</span><br><span class="line">Username (leave blank to <span class="keyword">use</span> 'xuqin'): xuqm</span><br><span class="line">Error: That username is already taken.</span><br><span class="line">Username (leave blank to <span class="keyword">use</span> 'xuqin'): admin</span><br><span class="line">Email address: <span class="number">123456</span></span><br><span class="line">Error: Enter a valid email address.</span><br><span class="line">Email address: xuqinmin12@sina<span class="variable">.com</span></span><br><span class="line">Password:</span><br><span class="line">Password (again):</span><br><span class="line">This password is too short. It must contain at least <span class="number">8</span> characters.</span><br><span class="line">This password is too common.</span><br><span class="line">This password is entirely numeric.</span><br><span class="line">Bypass password validation <span class="keyword">and</span> create user anyway? [y/N]: y</span><br><span class="line">Superuser created successfully.</span><br></pre></td></tr></table></figure><p>使用的是一个旧的数据库，所以其实已经创建过超级用户了</p><p>理论上现在可以看到管理页面了，<code>http://127.0.0.1:8000/admin</code></p><p><img src="https://xuqinmin.com/images/admin/admin_login.png" alt=""></p><p>输入刚才创建的超级用户的用户名密码，完成登录</p><p><img src="https://xuqinmin.com/images/admin/admin_administration.png" alt=""></p><p>就是长的这样子。</p><blockquote><p>现有有个问题，我这个学渣，看不懂英文。</p><p>改！</p></blockquote><p>修改<code>settings.py</code>文件</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = <span class="string">'zh-Hans'</span></span><br><span class="line"></span><br><span class="line">TIME_ZONE = <span class="string">'Asia/Harbin'</span></span><br></pre></td></tr></table></figure><p>结果就好看多了么</p><p><img src="https://xuqinmin.com/images/admin/admin_zh.png" alt=""></p><blockquote><p>下班了~</p></blockquote><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;p&gt;之前完成了一个django项目的新建工作，这次就做一些初始化的东西吧&lt;/p&gt;&lt;/blockquote&gt;&lt;h4 id=&quot;1
       
     
     </summary>
@@ -53,15 +85,15 @@
     <link href="https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/"/>
     <id>https://xuqm.github.io/2020/04/17/django%20%E5%81%9A%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BB%83%E4%B9%A0/</id>
     <published>2020-04-17T06:38:24.000Z</published>
-    <updated>2020-04-17T10:05:21.765Z</updated>
+    <updated>2020-05-18T06:17:41.343Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Fri Apr 17 2020 18:05:31 GMT+0800 (GMT+08:00) --><blockquote><h5 id="最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"><a class="markdownIt-Anchor" href="#最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"></a> 最近在学习设计模式，之前断断续续的看过好多，自己也没有专门的练习和深入了解过，一直感觉对应设计模式相关的东西还是处于懵懂状态，这次下定决心好好的学习一下，所以做一个笔记用来督促自己。</h5></blockquote><blockquote><p>前段时间，想要整理一下现有的Android技术，写一个可以用的快速开发框架，然而，咸鱼依然还是咸鱼。</p><p>使用mvvm模式，写了一部分。不会放出来的，那么羞耻的东西。</p><p>重点是，想要调用接口做测试的时候，突然想起来当年玩过几天Django，接着就想，是不是可以用django写一个测试用的服务呢？</p><p>写一个试试吧。</p></blockquote><h4 id="走一步看一步吧走到哪是哪才是咸鱼的本命"><a class="markdownIt-Anchor" href="#走一步看一步吧走到哪是哪才是咸鱼的本命"></a> 走一步看一步吧，走到哪是哪才是咸鱼的本命</h4><h5 id="1新建一个项目这里我用的是-pycharm做的开发"><a class="markdownIt-Anchor" href="#1新建一个项目这里我用的是-pycharm做的开发"></a> 1.新建一个项目，这里我用的是<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener"> <em>PyCharm</em></a>做的开发。</h5><blockquote><p>写到这里，突然想起来需要截图，然后想了下图片需要上传到服务器，然后想要了解下有哪些可以用的服务器，等我回来。</p></blockquote><blockquote><p>想了想，自己有个闲置的阿里云服务器，就用它吧</p><p>写了个脚本，使用 <code>python -m SimpleHTTPServer</code> 启动一个文件服务</p></blockquote><img src="http://39.105.161.109/images/django-creat.jpg" style="zoom:50%"><blockquote><p>我的项目都是这么创建的，感觉比较方便</p><p>环境用的是anaconda 的python3.7，我本地的是3.8版本，直接使用的时候，配置postgresql的时候会出问题，没找到为啥，换了一个就好了</p></blockquote><blockquote><p>等了一会，该转的圈转完了，新建项目的工作完成了。目录结构</p></blockquote><img src="http://39.105.161.109/images/django-creat-success.jpg" style="zoom:50%"><blockquote><p>启动一下看看效果,看看开心的小火箭。</p></blockquote><img src="http://39.105.161.109/images/django-creat_web.jpg" alt="asdd" style="zoom:80%"><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --><blockquote><h5 id="最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"><a class="markdownIt-Anchor" href="#最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于懵懂状态这次下定决心好好的学习一下所以做一个笔记用来督促自己"></a> 最近在学习设计模式，之前断断续续的看过好多，自己也没有专门的练习和深入了解过，一直感觉对应设计模式相关的东西还是处于懵懂状态，这次下定决心好好的学习一下，所以做一个笔记用来督促自己。</h5></blockquote><blockquote><p>前段时间，想要整理一下现有的Android技术，写一个可以用的快速开发框架，然而，咸鱼依然还是咸鱼。</p><p>使用mvvm模式，写了一部分。不会放出来的，那么羞耻的东西。</p><p>重点是，想要调用接口做测试的时候，突然想起来当年玩过几天Django，接着就想，是不是可以用django写一个测试用的服务呢？</p><p>写一个试试吧。</p></blockquote><h4 id="走一步看一步吧走到哪是哪才是咸鱼的本命"><a class="markdownIt-Anchor" href="#走一步看一步吧走到哪是哪才是咸鱼的本命"></a> 走一步看一步吧，走到哪是哪才是咸鱼的本命</h4><h5 id="1新建一个项目这里我用的是-pycharm做的开发"><a class="markdownIt-Anchor" href="#1新建一个项目这里我用的是-pycharm做的开发"></a> 1.新建一个项目，这里我用的是<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener"> <em>PyCharm</em></a>做的开发。</h5><blockquote><p>写到这里，突然想起来需要截图，然后想了下图片需要上传到服务器，然后想要了解下有哪些可以用的服务器，等我回来。</p></blockquote><blockquote><p>想了想，自己有个闲置的阿里云服务器，就用它吧</p><p>写了个脚本，使用 <code>python -m SimpleHTTPServer</code> 启动一个文件服务</p></blockquote><img src="https://xuqinmin.com/images/django-creat.jpg" style="zoom:50%"><blockquote><p>我的项目都是这么创建的，感觉比较方便</p><p>环境用的是anaconda 的python3.7，我本地的是3.8版本，直接使用的时候，配置postgresql的时候会出问题，没找到为啥，换了一个就好了</p></blockquote><blockquote><p>等了一会，该转的圈转完了，新建项目的工作完成了。目录结构</p></blockquote><img src="https://xuqinmin.com/images/django-creat-success.jpg" style="zoom:50%"><blockquote><p>启动一下看看效果,看看开心的小火箭。</p></blockquote><img src="https://xuqinmin.com/images/django-creat_web.jpg" alt="asdd" style="zoom:80%"><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Fri Apr 17 2020 18:05:31 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于
+        &lt;!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;最近在学习设计模式之前断断续续的看过好多自己也没有专门的练习和深入了解过一直感觉对应设计模式相关的东西还是处于
       
     
     </summary>
@@ -82,18 +114,18 @@
   
   <entry>
     <title>设计模式-建造者模式</title>
-    <link href="https://xuqm.github.io/2020/04/03/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://xuqm.github.io/2020/04/03/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xuqm.github.io/2020/04/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-03T05:46:57.000Z</published>
     <updated>2020-04-03T05:47:33.592Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Fri Apr 03 2020 14:56:54 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Fri Apr 03 2020 14:56:54 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
+        &lt;!-- build time:Mon May 18 2020 14:19:01 GMT+0800 (GMT+08:00) --&gt;&lt;!-- rebuild by neat --&gt;
       
     
     </summary>
