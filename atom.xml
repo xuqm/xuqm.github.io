@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.xuqinmin.com/"/>
-  <updated>2020-05-22T02:09:49.063Z</updated>
+  <updated>2020-05-22T07:47:22.963Z</updated>
   <id>https://blog.xuqinmin.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS 布局模型</title>
+    <link href="https://blog.xuqinmin.com/2020/05/22/CSS%E5%B8%83%E5%B1%80%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://blog.xuqinmin.com/2020/05/22/CSS%E5%B8%83%E5%B1%80%E6%A8%A1%E5%9E%8B/</id>
+    <published>2020-05-22T02:39:54.000Z</published>
+    <updated>2020-05-22T07:47:22.963Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Fri May 22 2020 15:47:31 GMT+0800 (GMT+08:00) --><blockquote><p>跟着<code>实验楼</code>学习的记录</p></blockquote><blockquote><p>布局模型和盒模型一样都是CSS最基本、最核心的概念。但布局模型是建立在盒模型的基础之上，又不同于我们常说的CSS布局样式或CSS布局模板。CSS三种基本网页布局模型：流动模型(Flow)、浮动模型(Float)、层模型(Layer)。</p></blockquote><ul><li>流动(Flow)</li></ul><blockquote><p>是默认的网页布局模式,也就是说网页在默认状态下的HTML网页元素都是根据流动模型来分布网页内容的。</p><ol><li>块状元素都会在所处的包含元素内，自上而下按顺序垂直延伸分布，因为在默认状态下，块级元素的宽度都为100%，实际上，块状元素都会以行的形式占据位置(每一个便签都显示着自己本来默认的那个宽度)。</li><li>在流动模型下，行内元素都会在所处的包含元素内从左到右水平分布显示(内联元素可不像块级元素独占一行的)。</li></ol></blockquote><ul><li>浮动模型</li></ul><blockquote><p>块状元素都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？设置元素浮动就可以实现。任何元素在默认情况下是不能浮动的，但可以用CSS定义为浮动，如 <code>div</code>、<code>p</code>、<code>table</code>、<code>img</code>等元素都可以定义为浮动。</p></blockquote><blockquote><p>如下代码可以实现两个<code>div</code>元素一行显示。</p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    div &#123;</span><br><span class="line">      width: 200px;</span><br><span class="line">      height: 200px;</span><br><span class="line">      border: 2px blue solid;</span><br><span class="line">      float: left;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Fri May 22 2020 15:47:31 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;p&gt;跟着&lt;code&gt;实验楼&lt;/code&gt;学习的记录&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;布局模型和
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://blog.xuqinmin.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="css" scheme="https://blog.xuqinmin.com/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS层叠性和继承性</title>
