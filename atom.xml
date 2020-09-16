@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.xuqinmin.com/"/>
-  <updated>2020-05-22T07:47:22.963Z</updated>
+  <updated>2020-09-16T03:07:47.255Z</updated>
   <id>https://blog.xuqinmin.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>特性</title>
+    <link href="https://blog.xuqinmin.com/2020/09/16/FastApi---01%E7%89%B9%E6%80%A7/"/>
+    <id>https://blog.xuqinmin.com/2020/09/16/FastApi---01%E7%89%B9%E6%80%A7/</id>
+    <published>2020-09-16T02:46:57.000Z</published>
+    <updated>2020-09-16T03:07:47.255Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Wed Sep 16 2020 11:09:14 GMT+0800 (GMT+08:00) --><blockquote><h5 id="复制一下官网的教程"><a class="markdownIt-Anchor" href="#复制一下官网的教程"></a> 复制一下官网的教程。</h5></blockquote><blockquote><p><a href="https://fastapi.tiangolo.com/zh/features/" target="_blank" rel="noopener">https://fastapi.tiangolo.com/zh/features/</a></p></blockquote><hr><p>[toc]</p><h1 id="fastapi特性"><a class="markdownIt-Anchor" href="#fastapi特性"></a> FastApi特性</h1><blockquote><p>FastApi提供了一下的内容：</p></blockquote><h2 id="基于开放标准"><a class="markdownIt-Anchor" href="#基于开放标准"></a> 基于开放标准</h2><ul><li>用于创建API的 <a href="https://github.com/OAI/OpenAPI-Specification" target="_blank" rel="noopener">OpenApi</a> 包含了路径操作，请求参数，请求体，安全性等的声明。</li><li>使用 <a href="http://json-schema.org/" target="_blank" rel="noopener">Json Schema</a>(因为 OpenApi 本身就是基于JSON Schema 的)自动生成数据模型文档。</li><li>经过了缜密的研究后围绕这些标准而设计，并非狗尾续貂。</li><li>这也允许了在很多语言中自动==生成客户端代码==。</li></ul><h2 id="自动生成文档"><a class="markdownIt-Anchor" href="#自动生成文档"></a> 自动生成文档</h2><blockquote><p>交互式 API 文档以及具有探索性web界面。因为该框架是基于 OpenAPI,所以有很多可选项，FastApi 默认自带两个交互式 API 文档。</p></blockquote><ul><li><a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="noopener">Swagger UI</a> ,可交互式操作，能在浏览器中直接调用和测试你的API。</li></ul><p><img src="https://xuqinmin.com/images/fastapi/index-03-swagger-02.png" alt=""></p><ul><li>另外的 API 文档：<a href="https://github.com/Rebilly/ReDoc" target="_blank" rel="noopener">ReDoc</a></li></ul><p><img src="https://xuqinmin.com/images/fastapi/index-06-redoc-02.png" alt=""></p><h2 id="更主流的-python"><a class="markdownIt-Anchor" href="#更主流的-python"></a> 更主流的 Python</h2><blockquote><p>全部都基于标准的 ==Python3.6类型==声明(感谢 Pydantic)。没有新的语法需要学校。只需要标准的Python。</p></blockquote><blockquote><p>如果你需要2分钟来学习如何使用Python类型(即使你不使用FastAPI)，看看这个简短的教程：<a href="https://fastapi.tiangolo.com/zh/python-types/" target="_blank" rel="noopener">Python Types</a></p></blockquote><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Wed Sep 16 2020 11:09:14 GMT+0800 (GMT+08:00) --&gt;&lt;blockquote&gt;&lt;h5 id=&quot;复制一下官网的教程&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#复制一下官网的教
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://blog.xuqinmin.com/categories/python/"/>
+    
+    
+      <category term="fastapi" scheme="https://blog.xuqinmin.com/tags/fastapi/"/>
+    
+      <category term="后端" scheme="https://blog.xuqinmin.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS 布局模型</title>
